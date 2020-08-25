@@ -3,4 +3,5 @@
     <string name="start_game_text">Start game</string>
     <string name="introduce_text">Driller presents</string>
     <string name="_0">0</string>
+    <string name="random_heading">Это случайное число между 0 и %1d</string>
 </resources>

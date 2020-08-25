@@ -1,5 +1,6 @@
 package uz.wingrada.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,18 +14,33 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun toastMe(view: View){
-        val myToast = Toast.makeText(this, "Hello, it's a toast", Toast.LENGTH_SHORT)
+    fun toast(view: View){
+        val myToast = Toast.makeText(this, "Добро пожаловать в Driller", Toast.LENGTH_SHORT)
 
         myToast.show()
     }
 
-    fun countMe(view: View){
-        val countString = textView.text.toString()
+    fun count(view: View){
+        val countString = textCount.text.toString()
 
         var count: Int = Integer.parseInt(countString)
         count++
 
-        textView.text = count.toString()
+        textCount.text = count.toString()
+    }
+
+    fun random(view: View){
+        val randomIntent = Intent(this, SecondActivity::class.java)
+        val countString = textCount.text.toString()
+        val count = Integer.parseInt(countString)
+
+        randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
+
+        startActivity(randomIntent)
+    }
+
+    fun enterToGameScene(view: View){
+        val gameIntent = Intent(this, GameActivity::class.java)
+        startActivity(gameIntent)
     }
 }

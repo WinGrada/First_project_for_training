@@ -7,4 +7,6 @@
     <color name="colorBlack">#000000</color>
     <color name="background">#00A7F1</color>
     <color name="buttonBackground">#80D8FF</color>
+    <color name="colorTextButton">#06204C</color>
+    <color name="backgroundGameScene">#B6FDFF</color>
 </resources>
