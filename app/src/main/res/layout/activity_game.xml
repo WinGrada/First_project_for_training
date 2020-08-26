@@ -8,10 +8,12 @@
     tools:context=".GameActivity">
 
     <ImageView
+        android:onClick="damageGround"
         android:id="@+id/GroundView"
         android:layout_width="375dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
